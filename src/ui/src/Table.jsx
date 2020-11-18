@@ -43,6 +43,7 @@ const ResultTable = (props) => {
       field: 'id',
       headerName: 'Id',
       cellClassName: params => params.value.split('-')[1] ? 'match-cell' : 'common-cell',
+      sortComparator: (v1, v2) => `${v1}`.localeCompare(v2),
       renderCell: params => params.value.split('-')[1] ? (
         <>
           {params.value.split('-')[0]}
@@ -57,13 +58,14 @@ const ResultTable = (props) => {
       field: 'matchStatus',
       headerName: 'Match Status',
       cellClassName: 'common-cell',
+      sortComparator: (v1, v2) => `${v1}`.localeCompare(v2),
       width: 150,
     },
     {
       field: 'side',
       headerName: 'Side',
       cellClassName: params => params.value.length === 2 ? 'match-cell' : 'common-cell',
-      sortable: false,
+      sortComparator: (v1, v2) => `${v1}`.localeCompare(v2),
       renderCell: params => params.value.length === 2 ? (
         <>
           {params.value[0]}
@@ -97,6 +99,10 @@ const ResultTable = (props) => {
     },
     {
       field: 'matchStatus',
+      sort: 'asc',
+    },
+    {
+      field: 'side',
       sort: 'asc',
     },
   ];
