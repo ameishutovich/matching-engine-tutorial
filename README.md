@@ -140,6 +140,45 @@ $ export PATH=${M2_HOME}/bin:${PATH}
 $ mvn -v
 ```
 
+## Install NodeJS
+
+### Windows
+1. Download and Install [NodeJS](https://nodejs.org/en/download/)
+2. Check if node and npm are installed
+```
+$ node -v
+$ npm -v
+```
+
+### MacOS
+1. Install HomeBrew (If not installed already)
+```
+$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+```
+
+2. Install NodeJS
+```
+$ brew update
+$ brew install node
+```
+
+3. Check if node and npm are installed
+```
+$ node -v
+$ npm -v
+```
+
+### Linux
+1. Install NodeJS
+```
+$ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+$ sudo apt install nodejs
+```
+2. Check if node and npm are installed
+```
+$ node -v
+$ npm -v
+```
 
 ## Running the matching application
 ```
