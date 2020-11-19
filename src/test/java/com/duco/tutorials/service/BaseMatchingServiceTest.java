@@ -73,6 +73,7 @@ abstract class BaseMatchingServiceTest {
 	 */
 	@Test
 	public void threeEvenlyDistributedFields(TestInfo testInfo) throws IOException {
+//		MatchingResult result = match("uniqueFieldInPosition2", testInfo); // for SortingMatchingService (with unique field)
 		MatchingResult result = match("21_value_field_59_value_field_101_value_field", testInfo);
 		assertThat(result.getUnmatched(), hasSize(UNMATCHED_COUNT));
 		assertThat(result.getMatches(), hasSize(MATCHED_COUNT));
